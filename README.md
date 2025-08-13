@@ -22,15 +22,15 @@ Simple preconfigured SCEP provider for CtrlX OS demonstration
 -- SCEP Provisioning (Run in docker exec)
 
 	step ca provisioner add ctrlX_SCEP_provisioner \
-  --type SCEP --challenge "boschrexroth" \
-  --encryption-algorithm-identifier 2
+  	--type SCEP --challenge "boschrexroth" \
+  	--encryption-algorithm-identifier 2
 
 
 -- Client-side bootstrap and certificate installation. Not necessary on CtrlX devices.
-  {
-    CA_FINGERPRINT=$(docker run -v step:/home/step smallstep/step-ca step certificate fingerprint certs/root_ca.crt)
-    step ca bootstrap --ca-url https://localhost:9000 --fingerprint $CA_FINGERPRINT --install
-  }
+  	{
+    	CA_FINGERPRINT=$(docker run -v step:/home/step smallstep/step-ca step certificate fingerprint certs/root_ca.crt)
+    	step ca bootstrap --ca-url https://localhost:9000 --fingerprint $CA_FINGERPRINT --install
+  	}
 
 # CtrlX OS Enrollment
 - Endpoint = https://scep_server_ip:9000/scep/ctrlX_scep_provisioner
