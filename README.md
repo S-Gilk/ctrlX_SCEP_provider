@@ -27,6 +27,7 @@ Simple preconfigured SCEP provider for CtrlX OS demonstration
 
 
 -- Client-side bootstrap and certificate installation. Not necessary on CtrlX devices.
+
   	{
     	CA_FINGERPRINT=$(docker run -v step:/home/step smallstep/step-ca step certificate fingerprint certs/root_ca.crt)
     	step ca bootstrap --ca-url https://localhost:9000 --fingerprint $CA_FINGERPRINT --install
