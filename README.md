@@ -3,11 +3,11 @@ Simple preconfigured SCEP provider for CtrlX OS demonstration
 
 # How-To
 1. Install docker engine
-2. Run init_ca.sh (New system)
+2. Run init_ca.sh **(New system)**
 	- WARNING: This will overwrite any existing CA
 	- This calls docker compose and also sets up the intermediate CA and SCEP provider in the container. 
 	- It was desinged to run in Windows Git-Bash, so there may be issues in other shells.
-3. Run restart.sh (Existing system)
+3. Run restart.sh **(Existing system)**
 	- This restarts an existing ca
 	
 # Commands
