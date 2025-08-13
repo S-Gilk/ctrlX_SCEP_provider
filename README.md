@@ -38,5 +38,5 @@ Simple preconfigured SCEP provider for CtrlX OS demonstration
 - Challenge = boschrexroth
 
 # Resources
-	https://smallstep.com/docs/step-ca/provisioners/#scep
+https://smallstep.com/docs/step-ca/provisioners/#scep
 	
