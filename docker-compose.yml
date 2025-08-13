@@ -1,0 +1,26 @@
+networks:
+  step-ca-network:
+    driver: bridge
+services:
+  step-ca:
+    container_name: step-ca
+    image: smallstep/step-ca:latest
+    ports:
+      - 9000:9000
+      - 8080:8080
+    environment:
+      - DOCKER_STEPCA_INIT_NAME=CTRLX
+      - DOCKER_STEPCA_INIT_DNS_NAMES=localhost,$(hostname)
+    networks:
+      - step-ca-network
+    volumes:
+      - ./volumes/step:/home/step
+      - ./volumes/scripts:/home/scripts
+volumes:
+  step:
+    driver: local
+  scripts:
+    driver: local
+
+    
+
