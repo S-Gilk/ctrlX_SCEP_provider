@@ -33,9 +33,9 @@ Simple preconfigured SCEP provider for CtrlX OS demonstration
   }
 
 # CtrlX OS Enrollment
-Endpoint = https://scep_server_ip:9000/scep/ctrlX_scep_provisioner
-Challenge = boschrexroth
+- Endpoint = https://scep_server_ip:9000/scep/ctrlX_scep_provisioner
+- Challenge = boschrexroth
 
-Resources
+# Resources
 	https://smallstep.com/docs/step-ca/provisioners/#scep
 	
